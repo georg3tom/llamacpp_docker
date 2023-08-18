@@ -1,0 +1,19 @@
+services:
+  llama:
+    build:
+      context: llama
+    container_name: llama
+    environment:
+      PORT: 8080
+    ports:
+      - '8080:8080'
+    restart: "no"
+  web:
+    build:
+      context: web
+    container_name: web
+    environment:
+      PORT: 3000
+    ports:
+      - '3000:3000'
+    restart: "no"
